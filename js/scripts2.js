@@ -69,13 +69,10 @@ function oddOrEven(number){
 // o "No es un año bisiesto" en función del resultado
 
 function leapYear(year){
-    if(year%400===0){
-        return 'Es Bisiesto';
-    }else if(year%100===0){
-        return 'No es Bisiesto';
-    }else if(year%4===0){
+    if(year%400===0 && year%100===0 || year%4===0){
         return 'Es Bisiesto';
     }
+    return 'No es Bisiesto'
 }
 
 // - Crea una función que reciba dos valores y los sume, la función debe sumar los valores aunque se los mandemos en formato
